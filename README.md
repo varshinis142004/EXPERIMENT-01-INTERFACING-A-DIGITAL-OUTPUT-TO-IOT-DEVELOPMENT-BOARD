@@ -27,7 +27,7 @@ One such microcontroller is the STM32WLE5JC, which is part of the STM32 family a
 
 The STM32WLE5JC is known for its ultra-low power consumption, making it perfect for battery-operated IoT devices such as smart agriculture sensors, environmental monitoring systems, industrial automation, and asset tracking. It supports multiple communication interfaces, including I2C, SPI, and UART, allowing seamless integration with various sensors and peripherals. Additionally, it features built-in security capabilities such as AES 256-bit encryption and a True Random Number Generator (TRNG) for secure data transmission.
 
-With its power-efficient design, built-in LoRaWAN support, and flexible communication options, the STM32WLE5JC is an excellent choice for developers looking to build long-range, low-power IoT applications. It is fully compatible with STM32CubeIDE and LoRaWAN middleware, making development and deployment easier for engineers and students alike.
+With its power-efficient design, built-in LoRaWAN support, and flexible communication options, the STM32WLE5JC is an excellent choice for developers looking to build long-range, low-power IoT applications. It is fully compatible with STM32CubeIDE and LoRaWAN middleware, making development and deployment easier for engineers and learners alike.
 ## Procedure
 
 1. Click on STM 32 CUBE IDE, the following screen will appear
@@ -76,10 +76,10 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 ![Screenshot 2025-03-11 135208](https://github.com/user-attachments/assets/bb67ab6b-81a5-450c-b170-4276a9b87ef2)
 
 
-13. Connect the STM board through the COM port, then upload the corresponding project ELF file/Hex file or Bin file in Erasing & Programming Window,while ensuring the board is in flash mode, and click on 'Start Program.'
+13. Connect the STM board through the COM port, then upload the corresponding project ELF file/Hex file or Bin file in Erasing & Programming Window,while ensuring the board is in flash mode, and click on 'Start Program.
     ![image](https://github.com/user-attachments/assets/9383531d-8204-4697-9321-55afb6abee2e)
 
-13.  After the file download is complete, switch your board to run mode and press the reset button to see the output
+14.  After the file download is complete, switch your board to run mode and press the reset button to see the output
 
 
 
