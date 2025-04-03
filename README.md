@@ -76,7 +76,7 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 ![Screenshot 2025-03-11 135208](https://github.com/user-attachments/assets/bb67ab6b-81a5-450c-b170-4276a9b87ef2)
 
 
-13. Connect the STM board through the COM port, then upload the corresponding project ELF file/Hex file or Bin file in Erasing & Programming Window,while ensuring the board is in flash mode, and click on 'Start Program.
+13. Connect the STM board through the COM port, then upload the corresponding project ELF file/Hex file or Bin file in Erasing & Programming Window,while ensuring the board is in flash mode, and click on 'Start Program'.
     ![image](https://github.com/user-attachments/assets/9383531d-8204-4697-9321-55afb6abee2e)
 
 14.  After the file download is complete, switch your board to run mode and press the reset button to see the output
