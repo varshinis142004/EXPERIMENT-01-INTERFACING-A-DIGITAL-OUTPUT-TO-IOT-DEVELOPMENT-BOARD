@@ -1,13 +1,13 @@
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
 
-**DATE:**
+**DATE: 16.04.2025**
 
-**NAME:**
+**NAME: VARSHINI.S**
 
-**ROLL NO:**
+**ROLL NO: 212222220056**
 
-**DEPARTMENT:**
+**DEPARTMENT: INFORMATION TECHNOLOGY**
 
 ## Aim
 
@@ -27,42 +27,33 @@ One such microcontroller is the STM32WLE5JC, which is part of the STM32 family a
 
 The STM32WLE5JC is known for its ultra-low power consumption, making it perfect for battery-operated IoT devices such as smart agriculture sensors, environmental monitoring systems, industrial automation, and asset tracking. It supports multiple communication interfaces, including I2C, SPI, and UART, allowing seamless integration with various sensors and peripherals. Additionally, it features built-in security capabilities such as AES 256-bit encryption and a True Random Number Generator (TRNG) for secure data transmission.
 
-With its power-efficient design, built-in LoRaWAN support, and flexible communication options, the STM32WLE5JC is an excellent choice for developers looking to build long-range, low-power IoT applications. It is fully compatible with STM32CubeIDE and LoRaWAN middleware, making development and deployment easier for engineers and learners alike.
-
+With its power-efficient design, built-in LoRaWAN support, and flexible communication options, the STM32WLE5JC is an excellent choice for developers looking to build long-range, low-power IoT applications. It is fully compatible with STM32CubeIDE and LoRaWAN middleware, making development and deployment easier for engineers and students alike.
 ## Procedure
 
 1. Click on STM 32 CUBE IDE, the following screen will appear
-   
  ![image](https://user-images.githubusercontent.com/36288975/226189166-ac10578c-c059-40e7-8b80-9f84f64bf088.png)
 
 
 2. Click on FILE, click on new stm 32 project
-   
 ![image](https://user-images.githubusercontent.com/36288975/226189215-2d13ebfb-507f-44fc-b772-02232e97c0e3.png)
 ![image](https://user-images.githubusercontent.com/36288975/226189230-bf2d90dd-9695-4aaf-b2a6-6d66454e81fc.png)
 
 3. Select the target to be programmed as shown below and click on next
-   
 ![Screenshot 2025-03-11 134231](https://github.com/user-attachments/assets/09e61f3d-224f-4ca8-96d4-7336869df5c7)
 
 4. Select the program name
-   
 ![image](https://user-images.githubusercontent.com/36288975/226189316-09832a30-4d1a-4d4f-b8ad-2dc28f137711.png)
 
 5. Corresponding ioc file will be generated automatically
-   
 ![Screenshot 2025-03-11 134528](https://github.com/user-attachments/assets/df427edd-e24a-4612-a858-aeae859b379f)
 
 
 6. Select the appropriate pins as GPIO, in or out, USART or required options and configure
-   
 ![Screenshot 2025-03-11 134617](https://github.com/user-attachments/assets/125ee548-30b1-4c88-932f-adf07984522f)
-
 ![Screenshot 2025-03-11 134642](https://github.com/user-attachments/assets/0adfbb58-4cad-408a-9300-f4808b53cac4)
 
 
 7. Click on Ctrl+S, automatically C program will be generated
-   
 ![Screenshot 2025-03-11 134709](https://github.com/user-attachments/assets/70b83b79-1569-4f14-99d5-e2adbb4e692d)
 
 8. Edit the program and as per required 
@@ -78,18 +69,13 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 
 ![image](https://user-images.githubusercontent.com/36288975/226189577-c61cc1eb-3990-4968-8aa6-aefffc766b70.png)
 
-11. connect the iot board to power supply and usb
-
-12. After connecting open the STM cube programmer
+11. Open STM32Cube Programmer
 
 ![Screenshot 2025-03-11 135208](https://github.com/user-attachments/assets/bb67ab6b-81a5-450c-b170-4276a9b87ef2)
 
 
-13. Connect the STM board through the COM port, then upload the corresponding project ELF file/Hex file or Bin file in Erasing & Programming Window,while ensuring the board is in flash mode, and click on 'Start Program'.
-    
-    ![image](https://github.com/user-attachments/assets/9383531d-8204-4697-9321-55afb6abee2e)
 
-14.  After the file download is complete, switch your board to run mode and press the reset button to see the output
+12. Connect the STM board through the COM port, then upload the corresponding project ELF file while ensuring the board is in flash mode, and click on 'Start Program.' After the file download is complete, switch your board to run mode and press the reset button to see the output
 
 
 
@@ -99,10 +85,29 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 ## STM 32 CUBE PROGRAM
 
 ```
-// Your STM 32 CUBE Program code here
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);
+	  HAL_Delay(5000);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET);
+	  HAL_Delay(2000);
+  }
+
+}
 ```
 
 ## OUTPUT
+
+![WhatsApp Image 2025-04-09 at 08 18 29_7f095793](https://github.com/user-attachments/assets/eb9c184d-241d-4e35-ad10-2b3b797a9703)
+![WhatsApp Image 2025-04-09 at 08 18 27_7206d354](https://github.com/user-attachments/assets/5edd88bc-0b4d-4d9a-b833-673b7e482d8b)
+
 
 ## Result
 
